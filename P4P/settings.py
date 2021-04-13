@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phone_field',
-    'users'
+    'users',
+    'needs',
+    'followup',
+    'offers',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +84,8 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Dj_demo3',
-        'USER': 'mahmoud'
+        'USER': 'postgres',
+        'PASSWORD': 'postgres'
 
     }
 }
