@@ -1,11 +1,11 @@
 from django.db import models
 from users.models import UserProfile
-# from .offers import Offers
+from offers.models import Offer
 
 
 # Create your models here.
 
-class Needs(models.Model):
+class Need(models.Model):
     name = models.CharField(max_length=100 , null=False , blank=False , unique=True)
     # id by default exists
 
@@ -13,4 +13,7 @@ class Needs(models.Model):
     user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
     # Relation with offers by offer_id
-    # offer_id = models.ForeignKey(Offers, on_delete=models.CASCADE)
+    offer_id = models.ForeignKey(Offer, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
